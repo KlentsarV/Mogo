@@ -1,39 +1,70 @@
+let users = [
+    {'userName': 'Vlad', 'userPassword': '1234' },
+    {'userName': 'Serhii', 'userPassword': '1111' },
+    {'userName': 'Dimon', 'userPassword': '1222' },
+    {'userName': 'Stas_retrix', 'userPassword': '5555' },
+];
 
 
-let userStatus = sessionStorage.getItem('user-status');
 
+function checkIsUserAuthorized() {
+    let userStatus = sessionStorage.getItem('user-status');
 
-
-let info = document.querySelector('.user_info'),
-
-    btnIn = document.querySelector('.button_in'),
-    suit = document.querySelector('.section_one'),
-    autorization = document.querySelector('.authorization'),
-    active = document.querySelector('.user_info--nan');
-
-if (userStatus) {
-    if (userStatus === '1') {
-        autorization.classList.add('authorization--active');
-        suit.classList.remove('section_one--active');
+    if (userStatus) {
+        if (userStatus === '1') {
+            setupAuthorized();
+        }
     }
 }
 
+function setupAuthorized() {
+    let suit = document.querySelector('.section_one');
+    let autorization = document.querySelector('.authorization');
+    let userNameEl = document.querySelector('.header__username');
+    let userName = sessionStorage.getItem('user-name');
 
-btnIn.addEventListener("click", function () {
+    autorization.classList.add('authorization--active');
+    suit.classList.remove('section_one--active');
+
+    userNameEl.innerText += userName;
+}
+
+function login() {
     let userName = document.querySelector('.user_name').value,
         userPassword = document.querySelector('.user_password').value;
-    if (userName === "Vlad" && userPassword === "1234") {
-        autorization.classList.add('authorization--active');
-        suit.classList.remove('section_one--active');
 
+    const isUserExists = users.some((el) => {
+        return userName === el.userName && userPassword === el.userPassword;
+    })
+
+    if (isUserExists) {
         sessionStorage.setItem('user-status', '1');
-    }
+        sessionStorage.setItem('user-name', userName);
 
+        setupAuthorized();
+    }
     else {
         active.classList.add('user_info--active');
     }
-});
+}
 
+function logout() {
+    sessionStorage.setItem('user-status', '0');
+    sessionStorage.setItem('user-name', '');
+
+    window.location.reload();
+}
+
+checkIsUserAuthorized();
+
+let info = document.querySelector('.user_info'),
+    btnIn = document.querySelector('.button_in'),
+    btnLogout = document.querySelector('#logout'),
+    active = document.querySelector('.user_info--nan');
+
+
+btnIn.addEventListener("click", login);
+btnLogout.addEventListener("click", logout);
 
 let intro = document.querySelector('.intro');
 let header = document.querySelector('.header');
@@ -158,10 +189,6 @@ sliderElems.forEach(function (elem, index) {
 
 //acardion
 
-
-
-
-
 document.querySelectorAll('.element_header').forEach((el) => {
 
     el.addEventListener('click', () => {
@@ -190,24 +217,29 @@ document.querySelectorAll('.element_header').forEach((el) => {
 
 });
 
+let photoImageElems= document.querySelectorAll('.works_ph');
+let photoPopupEl = document.querySelector('.photo-popup');
+let btnClosephotoPopup = photoPopupEl.querySelector('.photo-popup__close');
 
-//images
-
-
-
-document.querySelectorAll('.works_ph').forEach((el) => {
+photoImageElems.forEach(el => {
     el.addEventListener('click', () => {
-        let img = el.querySelector('.works_img')
-        if (img.style.height) {
-            img.style.height = null;
-            img.style.width = null;
-        }
-        else {
-            img.style.height = '800px';
-            img.style.width = '800px';
-        }
+        let srcEl = photoPopupEl.querySelector('.photo-popup__body img');
+        srcEl.src = el.querySelector('.works_img').src;
+        photoPopupEl.classList.add('photo-popup_active');
     })
-
 })
+
+function closePhotoPopup() {
+    photoPopupEl.classList.remove('photo-popup_active');
+}
+
+photoPopupEl.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('photo-popup__body')) {
+        closePhotoPopup();
+    }
+})
+
+btnClosephotoPopup.addEventListener('click', closePhotoPopup)
+
 
 

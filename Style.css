@@ -35,7 +35,7 @@ h6 {
   margin-top: 85px;
 }
 .user_info {
-  background: url(../Landing/Item/Reg.png) center no-repeat;
+  background: url(./Imeges/bg1.jpg) center no-repeat;
   width: 100%;
   max-width: 500px;
   height: 400px;
@@ -171,19 +171,24 @@ h6 {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: url(../Mogo/Imeges/intro.jpg) center no-repeat;
+  background: url(./Imeges/bg2.jpg) center no-repeat;
   position: relative;
   background-size: cover;
 }
 
 .intro_tittle {
-  font-size: 130px;
-  font-weight: 700px;
+  font-size: 100px;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
 
   color: #fff;
+}
+
+.header__username{
+  color:#ffffff;
+  font-weight: 700;
 }
 .intro_tittle:after {
   content: "";
@@ -400,12 +405,12 @@ h6 {
 
 .section--2 {
   padding-bottom: 0;
-  background: url(../Mogo/Imeges/intro2.jpg) center no-repeat;
+  background: url(./Imeges/intro2.jpg) center no-repeat;
   -webkit-backgraund-size: cover;
 }
 
 .section--3 {
-  background: url(../mogo/Imeges/intro3.jpg) center no-repeat;
+  background: url(./Imeges/intro3.jpg) center no-repeat;
   padding-top: 110px;
 }
 
@@ -898,6 +903,7 @@ h6 {
   color: #b1b1b1;
 }
 
+
 /*blog*/
 
 .last_blog {
@@ -1122,7 +1128,43 @@ h6 {
   .intro_up {
     font-size: 60px;
   }
-  .intro_tittle {
-    font-size: 90px;
-  }
+  /*.intro_tittle {*/
+  /*  font-size: 90px;*/
+  /*}*/
+}
+
+
+.photo-popup {
+  display: none;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-popup.photo-popup_active {
+  display: flex;
+}
+
+.photo-popup__body {
+  max-width: 600px;
+  position: relative;
+}
+
+.photo-popup__close {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.photo-popup__close img {
+  width: 100%;
 }
