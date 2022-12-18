@@ -9,21 +9,47 @@
         <script src="https://kit.fontawesome.com/7e483fba44.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+        <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+        />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
        <title>Mogo</title> 
     </head>
     <body>
-    <header class="header">
+        <div class="authorization ">
+            <div class="user_info">
+              <div class="user_info--nan">неверный логин или пароль</div>
+              <div class="user_contant">
+                <div class="container_user">
+                  <h1 class="tittle_reg">Авторизируйтесь</h1>
+                  <input class="user_name" placeholder="Логин" type="login" />
+                  <input class="user_password" placeholder="Пароль" type="password" />
+                  <div class="section_button">
+                    <button type="button" class="button_item button_reg">
+                      Регистрация
+                    </button>
+                    <button type="button" class="button_item button_in">Вход</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="backgraund_img" src="../Landing/Item/intro.png" alt="" />
+          </div>
+<div class="section_one section_one--active">
+    <header class="header ">
         <div class="container">
             <div class="header__inner">
-                <div class="header__logo">MoGo</div>
+                <div class="header__logo" >MoGo</div>
 
                 <nav class="nav">
-                    <a class="nav_cl active" href="#">Abaut</a>
-                    <a class="nav_cl" href="#">Service</a>
-                    <a class="nav_cl" href="#">Work</a>
-                    <a class="nav_cl" href="#">Blocg</a>
-                    <a class="nav_cl" href="http:/youtube.com">Video</a>
-                    <a class="nav_cl" href="http:/youtube.com">
+                    <a href="#" class="nav_cl" id="nav_cl--abaut"  >Abaut</a>
+                    <a href="#" class="nav_cl " id="nav_cl--services" >Service</a>
+                    <a href="#" class="nav_cl " id="nav_cl--team" data-scroll = "#" >Work</a>
+                    <a href="#" class="nav_cl " id="nav_cl--blog" data-scroll = "#" >Blocg</a>
+                    <a href="#" class="nav_cl " data-scroll = "#" ></a>
+                    <a class="nav_cl " href="http:/youtube.com">
                         <i class="fa-solid fa-cart-plus"></i>
                     </a>
                     <a class="nav_cl" href="http:/youtube.com">
@@ -35,30 +61,36 @@
         </div>
     </header>
 
-    <section class="intro ">
+   
+
+    <section class="intro" id="intro">
         <div class="container">
-            <div class="intro_size">
+            <div class="intro_size intro_size--1" >
                 <h2 class="intro_up">Creative Template</h2>
-                <h1 class="intro_tittle">Welcome to MoGo</h1>
-                <a class="btn1" href="#">Lern more</a>
-            </div> 
+                <h1 class="intro_tittle"> Welcome to mogo </h1>
+                <div class="btn1" href="#">Lern more</div>
+            </div>
         </div>
         <div class="slider">
                     <div class="container">
                         <div class="slider_dw">
-                            <div class="slider_j active">
+                            <div class="slider_j  active">
+                                <span class="slider-line" style="width: 25%"></span>
                                 <span class="number">01</span>
                                 intro
                             </div>
-                            <div class="slider_j">
+                            <div class="slider_j ">
+                                <span class="slider-line"></span>
                                 <span class="number">02</span>
                                 work
                             </div>
-                            <div class="slider_j">
+                            <div class="slider_j ">
+                                <span class="slider-line"></span>
                                 <span class="number">03</span>
                                 abaut
                                 </div>
                             <div class="slider_j">
+                                <span class="slider-line"></span>
                                 <span class="number">04</span>
                                 contacts
                             </div>
@@ -69,7 +101,7 @@
         
     </section>
 
-    <section class="section">
+    <section class="section" id="abaut_page">
         <div class="container">
             <div class="section_header">
                 <h3 class="tittle_up">What we do</h3>
@@ -140,7 +172,7 @@
         
     
 
-    <section class="section">
+    <section class="section" id="services_page">
         <div class="container">
             <div class="section_header">
                 <h3 class="tittle_up">What we do</h3>
@@ -211,9 +243,9 @@
 </section>
 
 
-    <section class="section">
-            <div class="container">
-                <div class="section_header section_header--2 ">
+    <section class="section" id="accardion_page">
+        <div class="container">
+            <div class="section_header section_header--2 ">
                     <h3 class="tittle_up">What we do</h3>
                     <h2 class="head_tittle">Amazing Services</h2>
                 </div>
@@ -223,16 +255,16 @@
 
                 <div class="wedo">
                     <div class="wedo_item">
-                        <img src="./Imeges/service.jpg" >
+                        <img class="wedo_item--photo" src="./Imeges/service.jpg" >
                     </div>
                     <div class="wedo_item ">
                         <div class="element">
-                            <div class="element_header">
+                            <div class="element_header" >
                                 <img class="element_img" src="./Imeges/pd1.jpg" alt="">
 
                                 <div class="element_title">Photography</div>
                                 
-                                <svg  xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 490 490" fill="#cdcdcd" xml:space="preserve">
+                                <svg class="element_row " xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 490 490" fill="#cdcdcd" xml:space="preserve">
                                     <g>
                                         <g>
                                         <polygon points="0,332.668 245.004,82.631 490,332.668 413.507,407.369 245.004,235.402 76.493,407.369   "/>
@@ -242,16 +274,19 @@
                                 
                                
                             </div>
-                            <div class="element_info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <div class="scroll"></div>
+                            <div class="element_info ">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                
                             </div>
-                            
+                        </div>
 
-                            <div class="element_header">
+                        <div class="element">
+                            <div class="element_header" >
                                 <img class="element_img" src="./Imeges/pd3.jpg" alt="">
                                 <div class="element_title">creativity</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 490 490" fill="#cdcdcd" xml:space="preserve">
+                                
+                                <svg class="element_row " xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 490 490" fill="#cdcdcd" xml:space="preserve">
                                     <g>
                                         <g>
                                         <polygon points="0,332.668 245.004,82.631 490,332.668 413.507,407.369 245.004,235.402 76.493,407.369   "/>
@@ -260,11 +295,19 @@
                                 </svg>
 
                             </div>
+                            <div class="element_info ">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                
+                            </div>
+                        </div>
 
+                        <div class="element">
                             <div class="element_header">
                                 <img class="element_img" src="./Imeges/pd2.jpg" alt="">
                                 <div class="element_title">web design</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 490 490" fill="#cdcdcd" xml:space="preserve">
+                                <svg class="element_row "  xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 490 490" fill="#cdcdcd" xml:space="preserve">
                                     <g>
                                         <g>
                                         <polygon points="0,332.668 245.004,82.631 490,332.668 413.507,407.369 245.004,235.402 76.493,407.369   "/>
@@ -272,6 +315,10 @@
                                     </g>
                                 </svg>
 
+                            </div>
+                            <div class="element_info ">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                
                             </div>
                         </div>  <!--element-->
                     </div>
@@ -282,30 +329,53 @@
             </div>   
             <div class="line_back line_back--2">
                 <div class="container">
-                    <div class="chat">    
-    
-                        <img class="chat_nav chat_nav--back" src="./Imeges/left.png">
-                        <img class="chat_nav chat_nav--next" src="./Imeges/right.png">
-                        
-    
-                        <div class="chat_elements">                              
-                            <img class="element_img1" src="./Imeges/chat.png" alt="">
-    
-                            <div class="chat_text">
-                                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="chat_elements">
+                                <img class="element_img1" src="./Imeges/chat.png" alt="">
+                                <div class="chat_text">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                </div>
+                                <div class="author"> Jon Doe</div>
                             </div>
-    
-                             <div class="author"> Jon Doe</div>
-                                        
-                        </div> <!--chat elements-->
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chat_elements">
+                                <img class="element_img1" src="./Imeges/chat.png" alt="">
+                                <div class="chat_text">
+                                    “Я любю Minecraft, Грався бы целый день”
+                                </div>
+                                <div class="author"> Anton B.</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chat_elements">
+                                <img class="element_img1" src="./Imeges/chat.png" alt="">
+                                <div class="chat_text">
+                                    “Dota one Love”
+                                </div>
+                                <div class="author"> Vlad K.</div>
+                            </div>
+                        </div>
                     </div>
+                    
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                   
+                </div>
                 </div>
             </div>
         </section>
 
     
 
-    <section class="section ">
+    <section class="section" id="section--team">
         <div class="container">
             <div class="section_header">
                 <h3 class="tittle_up">What we do</h3>
@@ -410,7 +480,7 @@
 
                         <div class="works_ph">
                             <div class="works_photo">
-                                <img class="works_ph--mal" src="./Imeges/Layer1.png">
+                                <img class="works_img" src="./Imeges/Layer1.png">
                             </div>
                             <div class="works_icone">
                                 <img src="./Imeges/photo_icone.png" alt="">
@@ -428,7 +498,7 @@
 
                         <div class="works_ph">
                             <div class="works_photo">
-                                <img class="works_ph--mal" src="./Imeges/Layer5.png">
+                                <img class="works_img" src="./Imeges/Layer5.png">
                             </div>
                             <div class="works_icone">
                                 <img src="./Imeges/photo_icone.png" alt="">
@@ -446,7 +516,7 @@
                 <div class="works"> 
                     <div class="works_ph">
                         <div class="works_photo">
-                            <img class="works_ph--mal" src="./Imeges/Layer2.png">
+                            <img class="works_img" src="./Imeges/Layer2.png">
                         </div>
                         <div class="works_icone">
                             <img src="./Imeges/photo_icone.png" alt="">
@@ -461,7 +531,7 @@
                     </div>
                     <div class="works_ph">
                         <div class="works_photo">
-                            <img class="works_ph--mal" src="./Imeges/Layer6.png">
+                            <img class="works_img" src="./Imeges/Layer6.png">
                         </div>
                         <div class="works_icone">
                             <img src="./Imeges/photo_icone.png" alt="">
@@ -478,7 +548,7 @@
                 <div class="works">
                     <div class="works_ph">
                         <div class="works_photo">
-                            <img class="works_ph--mal" src="./Imeges/Layer3.png">
+                            <img class="works_img" src="./Imeges/Layer3.png">
                         </div>
                         <div class="works_icone">
                             <img src="./Imeges/photo_icone.png" alt="">
@@ -492,9 +562,9 @@
                     </div>
                 </div>
                 <div class="works"> 
-                    <div class="works_ph">
+                    <div class="works_ph ">
                         <div class="works_photo">
-                            <img class="works_ph--mal" src="./Imeges/Layer4.png">
+                            <img class="works_img" src="./Imeges/Layer4.png">
                         </div>
                         <div class="works_icone">
                             <img src="./Imeges/photo_icone.png" alt="">
@@ -508,7 +578,7 @@
                     </div>
                     <div class="works_ph">
                         <div class="works_photo">
-                            <img class="works_ph--mal" src="./Imeges/Layer7.png">
+                            <img class="works_img" src="./Imeges/Layer7.png">
                         </div>
                         <div class="works_icone">
                             <img src="./Imeges/photo_icone.png" alt="">
@@ -526,23 +596,79 @@
         </div>
         <div class="line_back">
             <div class="container">
-                <div class="chat">    
+                <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="chat">    
+        <div class="chat_elements">                              
+            <img class="element_img1" src="./Imeges/author_ph.png" alt="">
 
-                    <img class="chat_nav chat_nav--back" src="./Imeges/left.png">
-                    <img class="chat_nav chat_nav--next" src="./Imeges/right.png">
-                    
+            <div class="chat_text">
+                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+            </div>
 
-                    <div class="chat_elements">                              
-                        <img class="element_img1" src="./Imeges/author_ph.png" alt="">
+             <div class="author"> Jon Doe</div>
+                        
+            </div> <!--chat elements-->
+    </div>
+</div>
+      <div class="swiper-slide">
+        <div class="chat">    
+        <div class="chat_elements">                              
+            <img class="element_img1" src="./Imeges/people2.png" alt="">
 
-                        <div class="chat_text">
-                             “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-                        </div>
+            <div class="chat_text">
+                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+            </div>
 
-                         <div class="author"> Jon Doe</div>
-                                    
-                        </div> <!--chat elements-->
-                </div>
+             <div class="author"> JAELYNN CASTILLO</div>
+                        
+            </div> <!--chat elements-->
+    </div>
+</div>
+      <div class="swiper-slide">
+        <div class="chat">    
+        <div class="chat_elements">                              
+            <img class="element_img1" src="./Imeges/people3.png" alt="">
+
+            <div class="chat_text">
+                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+            </div>
+
+             <div class="author"> NICK KARVOUNIS</div>
+                        
+            </div> <!--chat elements-->
+    </div>
+</div>
+      <div class="swiper-slide">
+        <div class="chat">    
+        <div class="chat_elements">                              
+            <img class="element_img1" src="./Imeges/people4.png" alt="">
+
+            <div class="chat_text">
+                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+            </div>
+
+             <div class="author"> MIKE PETRUCCI</div>
+                        
+            </div> <!--chat elements-->
+    </div>
+</div>
+      
+      ...
+    </div>
+    
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    
+  </div>
+                
             </div>
         </div>
     </section>
@@ -604,7 +730,7 @@
             
         </div>
     </section>
-    <section class="section ">
+    <section class="section " id="section--blog">
         <div class="container">
             <div class="section_header">
                 <h3 class="tittle_up">Our stories</h3>
@@ -804,5 +930,8 @@
     </div>
     </div>
     </div>
+</div>
+    
+    <script src="../Mogo/js/script.js"></script>
     </body>
 </html>
